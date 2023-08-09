@@ -9,7 +9,7 @@ export function Projects() {
 
     const { theme } = useContext(ThemeContext)
     return (
-        <S.ContainerProjects>
+        <S.ContainerProjects id="projects">
             <S.ContainerTitleProjects backgroundcolor={theme.containerPrimaryColor}>
                 <S.TitleText textColor={theme.textColor}>Meus
                     <S.SpecialTitleText textColor={theme.specialTextColor}> Projetos</S.SpecialTitleText>
