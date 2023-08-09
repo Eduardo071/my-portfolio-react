@@ -111,17 +111,17 @@ width: 8.8rem;
 `
 
 export const DescriptionText = styled.p<ProjectsProps>`
-font-size: 2.8rem;
+font-size: 2.4rem;
 color: ${props => props.textColor};
 text-align: justify;
 `
 
 export const RepoLink = styled.a<ProjectsProps>`
-font-size: 2.8rem;
+font-size: 2.5rem;
 color: ${props => props.textColor};
 `
 
 export const DeployLink = styled.a<ProjectsProps>`
-font-size: 2.8rem;
+font-size: 2.5rem;
 color: ${props => props.textColor};
 `
