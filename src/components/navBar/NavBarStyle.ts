@@ -39,3 +39,10 @@ export const listItem = styled.li<HeaderProps>`
 font-size: 2.1rem;
 color: ${props => props.textColor};
 `
+
+export const InternalLink = styled.a`
+
+&:hover {
+
+}
+`
