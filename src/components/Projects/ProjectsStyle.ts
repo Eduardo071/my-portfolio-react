@@ -44,6 +44,7 @@ export const LineDivisor = styled.span<ProjectsProps>`
 background-color: ${props => props.fontColor};
 width: 100vw;
 height: 0.1rem;
+margin-top: 4.2rem;
 `
 
 export const ContainerAllProjects = styled.div<ProjectsProps>`

@@ -15,7 +15,7 @@ export function About() {
                 
             </S.ContainerTitleAbout>
 
-            <S.ContainerDetailsAbout backgroundcolor={theme.containerPrimaryColor}>
+            <S.ContainerDetailsAbout shadowColor={theme.borderShadowColor} backgroundcolor={theme.containerPrimaryColor}>
                 <S.MyPhoto src={MyPhoto} alt="My photo" />
                 <S.AboutText textColor={theme.textColor}>Sou um entusiasta do desenvolvimento front-end com um ano de dedicação ao estudo e à prática de programação. Minha paixão pelo JavaScript, HTML e CSS é complementada pela emoção de integrar API's e criar com React.js, Styled-components ou até mesmo Sass.
 

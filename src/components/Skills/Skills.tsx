@@ -21,7 +21,7 @@ export function Skills() {
                 </S.TitleText>
             </S.ContainerTitleSkills>
 
-            <S.ContainerMySkills backgroundcolor={theme.containerPrimaryColor}>
+            <S.ContainerMySkills shadowColor={theme.borderShadowColor} backgroundcolor={theme.containerPrimaryColor}>
 
                 <Swiper
                 modules={[Navigation]}

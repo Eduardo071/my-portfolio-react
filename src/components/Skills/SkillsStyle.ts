@@ -4,6 +4,7 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 export interface SkillsProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
   backgroundcolor?: string;
   textColor?: string;
+  shadowColor?: string;
 }
 
 export const ContainerSkills = styled.section`
@@ -46,6 +47,7 @@ width: 80vw;
 min-height: 28vh;
 border-radius: 2.4rem;
 padding: 5rem 1.5rem;
+box-shadow: 5px 17px 31px 0px ${props => props.shadowColor};
 `
 
 export const Card = styled.div`

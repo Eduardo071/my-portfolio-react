@@ -4,6 +4,7 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 export interface AboutProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
   backgroundcolor?: string;
   textColor?: string;
+  shadowColor?: string;
 }
 
 export const ContainerAbout = styled.section`
@@ -46,6 +47,7 @@ justify-content: space-between;
 width: 80vw;
 align-self: center;
 padding: 6rem 3rem;
+box-shadow: 5px 17px 31px 0px ${props => props.shadowColor};
 `
 
 export const MyPhoto = styled.img<AboutProps>`
