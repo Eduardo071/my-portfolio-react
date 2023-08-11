@@ -3,7 +3,7 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface HeroProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
     textcolor?: string;
-    fontColor?: string;
+    fontcolor?: string;
 }
 
 export const ContainerHero = styled.main`
@@ -65,6 +65,3 @@ z-index: 0;
 position: absolute;
 height: 80vh;
 `
-// export const MediaSocialIcon = styled.img<HeroProps>`
-// background-color: ${props => props.fontColor};
-// `

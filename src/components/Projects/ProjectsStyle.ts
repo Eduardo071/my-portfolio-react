@@ -3,8 +3,8 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface ProjectsProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
     backgroundcolor?: string;
-    textColor?: string;
-    fontColor?: string;
+    textcolor?: string;
+    fontcolor?: string;
 }
 
 export const ContainerProjects = styled.section`
@@ -30,18 +30,18 @@ clip-path: polygon(10% 0, 85% 0, 75% 100%, 0% 100%);
 
 export const TitleText = styled.h1<ProjectsProps>`
 font-size: 5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 margin-right: 10rem;
 `
 
 export const SpecialTitleText = styled.strong<ProjectsProps>`
 font-size: 5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 
 export const LineDivisor = styled.span<ProjectsProps>`
-background-color: ${props => props.fontColor};
+background-color: ${props => props.fontcolor};
 width: 100vw;
 height: 0.1rem;
 margin-top: 4.2rem;
@@ -65,7 +65,7 @@ gap: 1rem;
 
 export const ProjectTitle = styled.h1<ProjectsProps>`
 font-size: 3rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const ContainerPreview = styled.div<ProjectsProps>`
@@ -113,16 +113,16 @@ width: 8.8rem;
 
 export const DescriptionText = styled.p<ProjectsProps>`
 font-size: 2.4rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 text-align: justify;
 `
 
 export const RepoLink = styled.a<ProjectsProps>`
 font-size: 2.5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const DeployLink = styled.a<ProjectsProps>`
 font-size: 2.5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `

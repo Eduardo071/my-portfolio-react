@@ -11,8 +11,8 @@ export function Projects() {
     return (
         <S.ContainerProjects id="projects">
             <S.ContainerTitleProjects backgroundcolor={theme.containerPrimaryColor}>
-                <S.TitleText textColor={theme.textColor}>Meus
-                    <S.SpecialTitleText textColor={theme.specialTextColor}> Projetos</S.SpecialTitleText>
+                <S.TitleText textcolor={theme.textColor}>Meus
+                    <S.SpecialTitleText textcolor={theme.specialTextColor}> Projetos</S.SpecialTitleText>
                 </S.TitleText>
             </S.ContainerTitleProjects>
 
@@ -20,7 +20,7 @@ export function Projects() {
                 {myProjects.map((project, index) => (
                     <S.CardProject key={index} backgroundcolor={theme.containerPrimaryColor}>
 
-                        <S.ProjectTitle textColor={theme.textColor}>{project.title}</S.ProjectTitle>
+                        <S.ProjectTitle textcolor={theme.textColor}>{project.title}</S.ProjectTitle>
                         <S.ContainerPreview>
                             <S.DesktopPreview>
                                 <S.ImageDesktopFrame src={desktopFrame} alt="Desktop preview" />
@@ -39,16 +39,16 @@ export function Projects() {
                             </S.MobilePreview>
                         </S.ContainerPreview>
 
-                        <S.DescriptionText textColor={theme.textColor}>{project.description}</S.DescriptionText>
+                        <S.DescriptionText textcolor={theme.textColor}>{project.description}</S.DescriptionText>
 
-                        <S.RepoLink textColor={theme.specialTextColor} target="_blank" href={project.github}>Link para o repositório</S.RepoLink>
-                        <S.DeployLink textColor={theme.specialTextColor} target="_blank" href={project.deploy}>Link para o deploy</S.DeployLink>
+                        <S.RepoLink textcolor={theme.specialTextColor} target="_blank" href={project.github}>Link para o repositório</S.RepoLink>
+                        <S.DeployLink textcolor={theme.specialTextColor} target="_blank" href={project.deploy}>Link para o deploy</S.DeployLink>
 
                     </S.CardProject>
                 ))}
             </S.ContainerAllProjects>
 
-            <S.LineDivisor fontColor={theme.textColor} />
+            <S.LineDivisor fontcolor={theme.textColor} />
         </S.ContainerProjects>
     )
 }

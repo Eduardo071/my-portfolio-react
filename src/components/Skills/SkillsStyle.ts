@@ -3,8 +3,8 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface SkillsProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
   backgroundcolor?: string;
-  textColor?: string;
-  shadowColor?: string;
+  textcolor?: string;
+  shadowcolor?: string;
 }
 
 export const ContainerSkills = styled.section`
@@ -29,13 +29,13 @@ clip-path: polygon(10% 0, 85% 0, 75% 100%, 0% 100%);
 
 export const TitleText = styled.h1<SkillsProps>`
 font-size: 5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 margin-right: 10rem;
 `
 
 export const SpecialTitleText = styled.strong<SkillsProps>`
 font-size: 5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const ContainerMySkills = styled.section<SkillsProps>`
@@ -47,7 +47,7 @@ width: 80vw;
 min-height: 28vh;
 border-radius: 2.4rem;
 padding: 5rem 1.5rem;
-box-shadow: 5px 17px 31px 0px ${props => props.shadowColor};
+box-shadow: 5px 17px 31px 0px ${props => props.shadowcolor};
 `
 
 export const Card = styled.div`
@@ -64,6 +64,6 @@ height: 8rem;
 
 export const SkillName = styled.h1<SkillsProps>`
 font-size: 2rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 text-align: center;
 `

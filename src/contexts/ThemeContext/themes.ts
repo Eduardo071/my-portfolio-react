@@ -10,7 +10,8 @@ export const themes = {
         specialTextColor: '#0081A4',
         containerPrimaryColor: '#C9C9C9',
         containerSecondaryColor: '#D1D1D1',
-        inputsBackgroundColor: '#C2C2C2'
+        inputsBackgroundColor: '#C2C2C2',
+        boxMessageColor: '#B1B1B1'
     },
     dark: {
         backgroundColor: '#1E1E1E',
@@ -23,6 +24,7 @@ export const themes = {
         specialTextColor: '#61DAFB',
         containerPrimaryColor: '#424242',
         containerSecondaryColor: '#464646',
-        inputsBackgroundColor: '#363636'
+        inputsBackgroundColor: '#363636', 
+        boxMessageColor: '#8D8D8D'
     }
 }

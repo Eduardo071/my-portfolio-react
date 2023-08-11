@@ -3,7 +3,7 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
   backgroundcolor?: string;
-  fontColor?: string;
+  fontcolor?: string;
 }
 
 export const Toggler = styled.div<HeaderProps>`

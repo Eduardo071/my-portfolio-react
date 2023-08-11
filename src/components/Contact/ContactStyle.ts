@@ -2,10 +2,9 @@ import styled from 'styled-components'
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface ContactProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
-  backgroundcolor?: string;
-  textColor?: string;
-  fontColor?: string;
-  shadowColor?: string;
+    backgroundcolor?: string;
+    textcolor?: string;
+    shadowcolor?: string;
 }
 
 export const ContainerContact = styled.section<ContactProps>`
@@ -29,13 +28,13 @@ clip-path: polygon(15% 0, 90% 0, 75% 100%, 0% 100%);
 
 export const TitleText = styled.h1<ContactProps>`
 font-size: 5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 margin-right: 4rem;
 `
 
 export const SpecialTitleText = styled.strong<ContactProps>`
 font-size: 5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const ContainerContactDetails = styled.section<ContactProps>`
@@ -56,24 +55,24 @@ max-width: 58rem;
 
 export const Subtitle = styled.h2<ContactProps>`
 font-size: 5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const SpecialSubtitle = styled.strong<ContactProps>`
 font-size: 5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const Paragraph = styled.p<ContactProps>`
 font-size: 2.4rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 text-align: justify;
 `
 
 export const SpecialParagraph = styled.strong<ContactProps>`
 font-size: 2.4rem;
-color: ${props => props.textColor};
-` 
+color: ${props => props.textcolor};
+`
 
 export const LinkEmail = styled.a<ContactProps>`
 display: flex;
@@ -93,7 +92,7 @@ width: 3rem;
 
 export const EmailText = styled.h2<ContactProps>`
 font-size: 2.4rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const Form = styled.form<ContactProps>`
@@ -103,7 +102,7 @@ flex-direction: column;
 
 export const Label = styled.label<ContactProps>`
 font-size: 3rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const Input = styled.input<ContactProps>`
@@ -114,21 +113,28 @@ border-style: none;
 border-radius: 1rem;
 padding: 0 1rem;
 font-size: 2.4rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 
 &::placeholder {
-    color: ${props => props.textColor};
+    color: ${props => props.textcolor};
 }
-&:last-child {
-    width: 20rem;
-    align-self: center;
-    font-size: 2.4rem;
-    color: ${props => props.textColor};
-    box-shadow: 5px 17px 31px 0px ${props => props.shadowColor};
-    
-    &:hover{
-        cursor: pointer;
-    }
+`
+
+export const ButtonSubmit = styled.button<ContactProps>`
+width: 20rem;
+height: 6rem;
+border-style: none;
+border-radius: 1rem;
+padding: 0 1rem;
+font-size: 2.4rem;
+align-self: center;
+font-size: 2.4rem;
+color: ${props => props.textcolor};
+box-shadow: 5px 17px 31px 0px ${props => props.shadowcolor};
+background-color: ${props => props.backgroundcolor};
+
+&:hover{
+    cursor: pointer;
 }
 `
 
@@ -136,7 +142,7 @@ export const TextArea = styled.textarea<ContactProps>`
 width: 40vw;
 height: 18rem;
 background-color: ${props => props.backgroundcolor};
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 border-style: none;
 border-radius: 1rem;
 margin-bottom: 1rem;
@@ -145,7 +151,7 @@ font-size: 2.4rem;
 padding: 1rem;
 
 &::placeholder {
-    color: ${props => props.textColor};
+    color: ${props => props.textcolor};
 }
 `
 

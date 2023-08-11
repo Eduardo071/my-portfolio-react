@@ -3,8 +3,8 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface AboutProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
   backgroundcolor?: string;
-  textColor?: string;
-  shadowColor?: string;
+  textcolor?: string;
+  shadowcolor?: string;
 }
 
 export const ContainerAbout = styled.section`
@@ -28,13 +28,13 @@ clip-path: polygon(15% 0, 90% 0, 75% 100%, 0% 100%);
 
 export const TitleText = styled.h1<AboutProps>`
 font-size: 5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 margin-right: 4rem;
 `
 
 export const SpecialTitleText = styled.strong<AboutProps>`
 font-size: 5rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const ContainerDetailsAbout = styled.section<AboutProps>`
@@ -47,7 +47,7 @@ justify-content: space-between;
 width: 80vw;
 align-self: center;
 padding: 6rem 3rem;
-box-shadow: 5px 17px 31px 0px ${props => props.shadowColor};
+box-shadow: 5px 17px 31px 0px ${props => props.shadowcolor};
 `
 
 export const MyPhoto = styled.img<AboutProps>`
@@ -57,7 +57,7 @@ width: 30rem;
 
 export const AboutText = styled.p<AboutProps>`
 font-size: 2rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 text-align: justify;
 `
 

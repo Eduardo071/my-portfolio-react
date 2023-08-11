@@ -12,7 +12,8 @@ type Tthemes = {
         specialTextColor:        string,
         containerPrimaryColor:   string,
         containerSecondaryColor: string,
-        inputsBackgroundColor:   string
+        inputsBackgroundColor:   string,
+        boxMessageColor:         string
 }
 interface ThemeContextType {
     theme: Tthemes;

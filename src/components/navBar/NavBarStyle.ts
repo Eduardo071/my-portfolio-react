@@ -3,7 +3,7 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
   backgroundcolor?: string;
-  textColor?: string;
+  textcolor?: string;
 }
 
 export const Header = styled.header<HeaderProps>`
@@ -18,12 +18,12 @@ background-color: ${props => props.backgroundcolor};
 export const Title = styled.h1<HeaderProps>`
 
 font-size: 3rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const specialTitle = styled.strong<HeaderProps>`
   font-size: 3rem;
-  color: ${props => props.textColor};
+  color: ${props => props.textcolor};
 `
 
 export const navLinks = styled.nav`
@@ -37,7 +37,7 @@ gap: 1.7rem;
 
 export const listItem = styled.li<HeaderProps>`
 font-size: 2.1rem;
-color: ${props => props.textColor};
+color: ${props => props.textcolor};
 `
 
 export const InternalLink = styled.a`

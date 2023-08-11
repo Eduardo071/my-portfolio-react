@@ -16,12 +16,12 @@ export function Skills() {
         <S.ContainerSkills id="skills">  
 
             <S.ContainerTitleSkills backgroundcolor={theme.containerPrimaryColor}>
-                <S.TitleText textColor={theme.textColor}>Minhas
-                    <S.SpecialTitleText textColor={theme.specialTextColor}> Habilidades</S.SpecialTitleText>
+                <S.TitleText textcolor={theme.textColor}>Minhas
+                    <S.SpecialTitleText textcolor={theme.specialTextColor}> Habilidades</S.SpecialTitleText>
                 </S.TitleText>
             </S.ContainerTitleSkills>
 
-            <S.ContainerMySkills shadowColor={theme.borderShadowColor} backgroundcolor={theme.containerPrimaryColor}>
+            <S.ContainerMySkills shadowcolor={theme.borderShadowColor} backgroundcolor={theme.containerPrimaryColor}>
 
                 <Swiper
                 modules={[Navigation]}
@@ -34,7 +34,7 @@ export function Skills() {
                     <SwiperSlide key={index}>
                         <S.Card>
                         <S.SkillImage src={skill.pathImage} />
-                        <S.SkillName textColor={theme.textColor}>{skill.name}</S.SkillName>
+                        <S.SkillName textcolor={theme.textColor}>{skill.name}</S.SkillName>
                         </S.Card>
                     </SwiperSlide>
                 ))}
