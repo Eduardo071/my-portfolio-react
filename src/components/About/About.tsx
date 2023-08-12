@@ -13,7 +13,7 @@ export function About() {
     useEffect(() => {
         gsap.fromTo("#aboutLabel, #detailsAbout",
             {
-                y: 100
+                y: 200
             },
             {
                 y: 0,
