@@ -3,7 +3,25 @@ import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext"
 import * as S from './ContactStyle'
 import { sendEmail } from "../../services/api/api"
 import { BoxResponseEmail } from "../BoxResponseEmail/BoxResponseEmail"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { gsap } from "gsap"
 
+gsap.registerPlugin(ScrollTrigger)
+gsap.fromTo("#contactLabel, #form, #informationText",
+    {
+        y: 200
+    },
+    {
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#contactLabel",
+            start: "top bottom+=800",
+            scrub: true,
+            toggleActions: "play none none reverse",
+        },
+    }
+)
 
 export function Contact() {
 
@@ -24,14 +42,14 @@ export function Contact() {
     return (
 
         <S.ContainerContact id="contact">
-            <S.ContainerTitleContact backgroundcolor={theme.containerPrimaryColor}>
+            <S.ContainerTitleContact id="contactLabel" backgroundcolor={theme.containerPrimaryColor}>
                 <S.TitleText textcolor={theme.textColor}>Contate-
                     <S.SpecialTitleText textcolor={theme.specialTextColor}>me</S.SpecialTitleText>
                 </S.TitleText>
             </S.ContainerTitleContact>
 
             <S.ContainerContactDetails backgroundcolor={theme.containerSecondaryColor}>
-                <S.ContainerContactText>
+                <S.ContainerContactText id="informationText">
                     <S.Subtitle textcolor={theme.textColor}>Vamos trabalhar<S.SpecialSubtitle textcolor={theme.specialTextColor}> juntos</S.SpecialSubtitle>?</S.Subtitle>
                     <S.Paragraph>Pronto para dar vida à<S.SpecialParagraph textcolor={theme.specialTextColor}> inovação</S.SpecialParagraph>? Entre em contato agora e descubra como minhas habilidades em<S.SpecialParagraph textcolor={theme.specialTextColor}> desenvolvimento</S.SpecialParagraph> podem impulsionar sua equipe para novas alturas! 🚀💻</S.Paragraph>
                     <S.LinkEmail href="mailto:ti22mau@gmail.com?subject=Gostei%20do%20Portf%C3%B3lio&body=Ol%C3%A1%20Eduardo%2C%20gostei%20do%20seu%20portf%C3%B3lio" target="_blank">
@@ -43,13 +61,13 @@ export function Contact() {
                     </S.LinkEmail>
                 </S.ContainerContactText>
 
-                <S.Form method="post" ref={form} onSubmit={handleFormSubmit}>
+                <S.Form method="post" ref={form} id="form" onSubmit={handleFormSubmit}>
                     <S.Label textcolor={theme.specialTextColor}>Nome</S.Label>
-                    <S.Input textcolor={theme.textColor} placeholder="Nome" backgroundcolor={theme.inputsBackgroundColor} type="text" name="user_name" />
+                    <S.Input required textcolor={theme.textColor} placeholder="Nome" backgroundcolor={theme.inputsBackgroundColor} type="text" name="user_name" />
                     <S.Label textcolor={theme.specialTextColor}>Email</S.Label>
-                    <S.Input textcolor={theme.textColor} placeholder="Email" backgroundcolor={theme.inputsBackgroundColor} type="email" name="user_email" />
+                    <S.Input required textcolor={theme.textColor} placeholder="Email" backgroundcolor={theme.inputsBackgroundColor} type="email" name="user_email" />
                     <S.Label textcolor={theme.specialTextColor}>Mensagem</S.Label>
-                    <S.TextArea textcolor={theme.textColor} placeholder="Mensagem" backgroundcolor={theme.inputsBackgroundColor} name="message" />
+                    <S.TextArea required textcolor={theme.textColor} placeholder="Mensagem" backgroundcolor={theme.inputsBackgroundColor} name="message" />
                     <S.ButtonSubmit textcolor={theme.specialTextColor} shadowcolor={theme.borderShadowColor} backgroundcolor={theme.inputsBackgroundColor} type="submit" >Enviar</S.ButtonSubmit>
                 </S.Form>
             </S.ContainerContactDetails>

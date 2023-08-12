@@ -4,13 +4,32 @@ import * as S from './ProjectsStyle'
 import { myProjects } from "./myProjects"
 import desktopFrame from '../../assets/monitor frame.png'
 import mobileFrame from '../../assets/mobile frame.png'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { gsap } from "gsap"
+
+gsap.registerPlugin(ScrollTrigger)
+gsap.fromTo("#projectsLabel, #cardProject",
+    {
+        y: 200
+    },
+    {
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#projectsLabel",
+            start: "top bottom",
+            scrub: true,
+            toggleActions: "play none none reverse",
+        },
+    }
+)
 
 export function Projects() {
 
     const { theme } = useContext(ThemeContext)
     return (
         <S.ContainerProjects id="projects">
-            <S.ContainerTitleProjects backgroundcolor={theme.containerPrimaryColor}>
+            <S.ContainerTitleProjects id="projectsLabel" backgroundcolor={theme.containerPrimaryColor}>
                 <S.TitleText textcolor={theme.textColor}>Meus
                     <S.SpecialTitleText textcolor={theme.specialTextColor}> Projetos</S.SpecialTitleText>
                 </S.TitleText>
@@ -18,7 +37,7 @@ export function Projects() {
 
             <S.ContainerAllProjects>
                 {myProjects.map((project, index) => (
-                    <S.CardProject key={index} backgroundcolor={theme.containerPrimaryColor}>
+                    <S.CardProject id="cardProject" key={index} backgroundcolor={theme.containerPrimaryColor}>
 
                         <S.ProjectTitle textcolor={theme.textColor}>{project.title}</S.ProjectTitle>
                         <S.ContainerPreview>
@@ -32,8 +51,6 @@ export function Projects() {
 
                             <S.MobilePreview>
                                 <S.ImageMobileFrame src={mobileFrame} alt="Mobile preview" />
-
-
                                 <S.ImageMobilePreview src={project.imageMobilePath} alt="Print Preview" />
 
                             </S.MobilePreview>

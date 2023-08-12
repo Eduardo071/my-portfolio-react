@@ -6,6 +6,25 @@ import myStacks from '../../assets/my stacks icons.svg'
 import { CvIcon } from '../CvIcon/CvIcon'
 import { LinkedinIcon } from '../LinkedinIcon/LinkedinIcon'
 import { GithubIcon } from '../GithubIcon/GithubIcon'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { gsap } from "gsap"
+
+gsap.registerPlugin(ScrollTrigger)
+gsap.fromTo("#stacksImage, #textHero",
+    {
+        y: 200
+    },
+    {
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#stacksImage",
+            start: "top bottom+=1500",
+            scrub: true,
+            toggleActions: "play none none reverse",
+        }
+    }
+)
 
 export function Hero() {
 
@@ -14,8 +33,8 @@ export function Hero() {
     const pdfFileName = 'EduardoBorges_DevFrontEndJunior.pdf'
     return (
         <S.ContainerHero>
-            <S.BackgroundImage src={myStacks} alt="" />
-            <S.ContainerTextHero>
+            <S.BackgroundImage id='stacksImage' src={myStacks} alt="" />
+            <S.ContainerTextHero id='textHero'>
             <S.Subtitle textcolor={theme.subTextColor}>Olá 👋 me chamo Eduardo</S.Subtitle>
             <S.FirstLineHero>
                 <S.Title textcolor={theme.textColor}>REACT</S.Title>

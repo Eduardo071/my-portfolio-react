@@ -7,6 +7,25 @@ import { Navigation } from "swiper/modules"
 import 'swiper/css'
 import 'swiper/css/navigation'
 import './swiper.css'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { gsap } from "gsap"
+
+gsap.registerPlugin(ScrollTrigger)
+gsap.fromTo("#skillsLabel, #containerSkills",
+    {
+        y: 200
+    },
+    {
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#skillsLabel",
+            start: "top bottom-=100",
+            scrub: true,
+            toggleActions: "play none none reverse",
+        }
+    }
+)
 
 export function Skills() {
 
@@ -15,13 +34,13 @@ export function Skills() {
     return (
         <S.ContainerSkills id="skills">  
 
-            <S.ContainerTitleSkills backgroundcolor={theme.containerPrimaryColor}>
+            <S.ContainerTitleSkills id="skillsLabel" backgroundcolor={theme.containerPrimaryColor}>
                 <S.TitleText textcolor={theme.textColor}>Minhas
                     <S.SpecialTitleText textcolor={theme.specialTextColor}> Habilidades</S.SpecialTitleText>
                 </S.TitleText>
             </S.ContainerTitleSkills>
 
-            <S.ContainerMySkills shadowcolor={theme.borderShadowColor} backgroundcolor={theme.containerPrimaryColor}>
+            <S.ContainerMySkills id="containerSkills" shadowcolor={theme.borderShadowColor} backgroundcolor={theme.containerPrimaryColor}>
 
                 <Swiper
                 modules={[Navigation]}
