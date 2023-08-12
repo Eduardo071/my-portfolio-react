@@ -22,7 +22,6 @@ export function Projects() {
             scrollTrigger: {
                 trigger: "#projectsLabel",
                 start: "top bottom",
-                scrub: true,
                 toggleActions: "play none none reverse",
             },
         }

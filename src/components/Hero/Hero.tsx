@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger)
 export function Hero() {
 
     useEffect(() => {
-        gsap.fromTo("#stacksImage, #textHero",
+        gsap.fromTo("#teste",
             {
                 y: 100
             },
@@ -24,7 +24,6 @@ export function Hero() {
                 scrollTrigger: {
                     trigger: "#hero",
                     start: "top bottom-=100",
-                    scrub: true,
                     toggleActions: "play none none reverse",
                 },
             }
@@ -36,7 +35,9 @@ export function Hero() {
     const pdfFileName = 'EduardoBorges_DevFrontEndJunior.pdf'
     return (
         <S.ContainerHero id='hero'>
-            <S.BackgroundImage id='stacksImage' src={myStacks} alt="" />
+            <S.ContainerDetailsHero id='teste'>
+
+            <S.BackgroundImage id='stacksImage' src={myStacks} />
             <S.ContainerTextHero id='textHero'>
             <S.Subtitle textcolor={theme.subTextColor}>Olá 👋 me chamo Eduardo</S.Subtitle>
             <S.FirstLineHero>
@@ -49,6 +50,7 @@ export function Hero() {
             </S.FirstLineHero>
             <S.SpecialTitle textcolor={theme.specialTextColor}>DEVELOPER</S.SpecialTitle>
             </S.ContainerTextHero>
+            </S.ContainerDetailsHero>
         </S.ContainerHero>
     )
 }

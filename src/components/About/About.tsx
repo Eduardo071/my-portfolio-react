@@ -21,7 +21,6 @@ export function About() {
                 scrollTrigger: {
                     trigger: "#aboutLabel",
                     start: "top bottom",
-                    scrub: true,
                     toggleActions: "play none none reverse",
                 },
             }

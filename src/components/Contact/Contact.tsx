@@ -13,15 +13,14 @@ export function Contact() {
     useEffect(() => {
         gsap.fromTo("#form, #informationText",
         {
-            y: 200
+            y: 100
         },
         {
             y: 0,
-            duration: 1,
+            duration: 2,
             scrollTrigger: {
                 trigger: "#contactLabel",
                 start: "top bottom",
-                scrub: true,
                 toggleActions: "play none none reverse",
             },
         }

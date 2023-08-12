@@ -65,3 +65,8 @@ z-index: 0;
 position: absolute;
 height: 80vh;
 `
+export const ContainerDetailsHero = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+` 
