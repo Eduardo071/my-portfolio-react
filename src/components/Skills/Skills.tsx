@@ -23,7 +23,7 @@ export function Skills() {
             y: 0,
             duration: 1,
             scrollTrigger: {
-                trigger: "#skills",
+                trigger: "#skillsLabel",
                 start: "top bottom",
                 scrub: true,
                 toggleActions: "play none none reverse",
