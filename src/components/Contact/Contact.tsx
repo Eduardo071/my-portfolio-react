@@ -1,4 +1,4 @@
-import { FormEvent, useContext, useRef, useState } from "react"
+import { FormEvent, useContext, useRef, useState, useEffect } from "react"
 import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext"
 import * as S from './ContactStyle'
 import { sendEmail } from "../../services/api/api"
@@ -7,23 +7,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { gsap } from "gsap"
 
 gsap.registerPlugin(ScrollTrigger)
-gsap.fromTo("#contactLabel, #form, #informationText",
-    {
-        y: 200
-    },
-    {
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-            trigger: "#contactLabel",
-            start: "top bottom+=800",
-            scrub: true,
-            toggleActions: "play none none reverse",
-        },
-    }
-)
 
 export function Contact() {
+    
+    useEffect(() => {
+        gsap.fromTo("#form, #informationText",
+        {
+            y: 200
+        },
+        {
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#contactLabel",
+                start: "top bottom",
+                scrub: true,
+                toggleActions: "play none none reverse",
+            },
+        }
+    )
+    
+    }, [])
 
     const { theme } = useContext(ThemeContext)
     const [emailStatus, setEmailStatus] = useState<string | null>(null)

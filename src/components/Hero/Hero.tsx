@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import * as S from './HeroStyle'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { ThemeContext } from '../../contexts/ThemeContext/ThemeContext'
 import myStacks from '../../assets/my stacks icons.svg'
 import { CvIcon } from '../CvIcon/CvIcon'
@@ -10,29 +10,32 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { gsap } from "gsap"
 
 gsap.registerPlugin(ScrollTrigger)
-gsap.fromTo("#stacksImage, #textHero",
-    {
-        y: 200
-    },
-    {
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-            trigger: "#stacksImage",
-            start: "top bottom+=1500",
-            scrub: true,
-            toggleActions: "play none none reverse",
-        }
-    }
-)
 
 export function Hero() {
+
+    useEffect(() => {
+        gsap.fromTo("#stacksImage, #textHero",
+            {
+                y: 100
+            },
+            {
+                y: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: "#hero",
+                    start: "top bottom-=100",
+                    scrub: true,
+                    toggleActions: "play none none reverse",
+                },
+            }
+        )
+        }, [])
 
     const { theme } = useContext(ThemeContext)
 
     const pdfFileName = 'EduardoBorges_DevFrontEndJunior.pdf'
     return (
-        <S.ContainerHero>
+        <S.ContainerHero id='hero'>
             <S.BackgroundImage id='stacksImage' src={myStacks} alt="" />
             <S.ContainerTextHero id='textHero'>
             <S.Subtitle textcolor={theme.subTextColor}>Olá 👋 me chamo Eduardo</S.Subtitle>

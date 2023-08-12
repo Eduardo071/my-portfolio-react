@@ -1,37 +1,41 @@
 import { ThemeContext } from '../../contexts/ThemeContext/ThemeContext'
 import MyPhoto from '../../images/myPhoto.jpeg'
 import * as S from './AboutStyle'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { gsap } from "gsap"
 
 gsap.registerPlugin(ScrollTrigger)
-gsap.fromTo("#aboutLabel, #detailsAbout",
-    {
-        y: 200
-    },
-    {
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-            trigger: "#aboutLabel",
-            start: "top bottom",
-            scrub: true,
-            toggleActions: "play none none reverse",
-        },
-    }
-)
+
 
 export function About() {
+
+    useEffect(() => {
+        gsap.fromTo("#aboutLabel, #detailsAbout",
+            {
+                y: 100
+            },
+            {
+                y: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: "#aboutLabel",
+                    start: "top bottom",
+                    scrub: true,
+                    toggleActions: "play none none reverse",
+                },
+            }
+        )
+    }, [])
 
     const { theme } = useContext(ThemeContext)
     return (
         <S.ContainerAbout id='about'>
             <S.ContainerTitleAbout id='aboutLabel' backgroundcolor={theme.containerPrimaryColor}>
                 <S.TitleText textcolor={theme.textColor}>Sobre
-                <S.SpecialTitleText textcolor={theme.specialTextColor}> mim</S.SpecialTitleText> 
+                    <S.SpecialTitleText textcolor={theme.specialTextColor}> mim</S.SpecialTitleText>
                 </S.TitleText>
-                
+
             </S.ContainerTitleAbout>
 
             <S.ContainerDetailsAbout id='detailsAbout' shadowcolor={theme.borderShadowColor} backgroundcolor={theme.containerPrimaryColor}>

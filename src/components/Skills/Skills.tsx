@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { mySkills } from "./mySkills"
 import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext"
 import * as S from './SkillsStyle'
@@ -11,23 +11,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { gsap } from "gsap"
 
 gsap.registerPlugin(ScrollTrigger)
-gsap.fromTo("#skillsLabel, #containerSkills",
-    {
-        y: 200
-    },
-    {
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-            trigger: "#skillsLabel",
-            start: "top bottom-=100",
-            scrub: true,
-            toggleActions: "play none none reverse",
-        }
-    }
-)
 
 export function Skills() {
+    
+    useEffect(() => {
+        gsap.fromTo("#skillsLabel, #containerSkills",
+        {
+            y: 200
+        },
+        {
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#skillsLabel",
+                start: "top bottom",
+                scrub: true,
+                toggleActions: "play none none reverse",
+            }
+        }
+    )
+    
+    }, [])
 
     const { theme } = useContext(ThemeContext)
 

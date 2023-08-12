@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext"
 import * as S from './ProjectsStyle'
 import { myProjects } from "./myProjects"
@@ -8,23 +8,26 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { gsap } from "gsap"
 
 gsap.registerPlugin(ScrollTrigger)
-gsap.fromTo("#projectsLabel, #cardProject",
-    {
-        y: 200
-    },
-    {
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-            trigger: "#projectsLabel",
-            start: "top bottom",
-            scrub: true,
-            toggleActions: "play none none reverse",
-        },
-    }
-)
 
 export function Projects() {
+    
+    useEffect(() => {
+    gsap.fromTo("#projectsLabel, #cardProject",
+        {
+            y: 200
+        },
+        {
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#projectsLabel",
+                start: "top bottom",
+                scrub: true,
+                toggleActions: "play none none reverse",
+            },
+        }
+    )
+    }, [])
 
     const { theme } = useContext(ThemeContext)
     return (
