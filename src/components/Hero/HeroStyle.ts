@@ -12,6 +12,7 @@ min-height: 85vh;
 display: flex;
 justify-content: center;
 align-items: center;
+margin-top: 8.5vh;
 `
 
 export const ContainerTextHero = styled.div`
@@ -21,7 +22,7 @@ z-index: 1;
 `
 
 export const Subtitle = styled.h3<HeroProps>`
-font-size: 2.2rem;
+font-size: 1.519vw;
 color: ${props => props.textcolor};
 
 &:hover {
@@ -30,8 +31,8 @@ cursor: default;
 `
 
 export const Title = styled.h1<HeroProps>`
-font-size: 15rem;
-line-height: 11rem;
+font-size: 10.033vw;
+line-height: 7.36vw;
 color: ${props => props.textcolor};
 
 &:hover {
@@ -40,8 +41,8 @@ color: ${props => props.textcolor};
 `
 
 export const SpecialTitle = styled.strong<HeroProps>`    
-font-size: 15rem;
-line-height: 14rem;
+font-size: 10.033vw;
+line-height: 9.36vw;
 color: ${props => props.textcolor};
 
 &:hover {
@@ -51,19 +52,20 @@ color: ${props => props.textcolor};
 
 export const FirstLineHero = styled.div`
 display: flex;
-gap: 7rem;
+gap: 4.68vw;
 align-items: center;
 `
 
 export const ListOfMediaSocial = styled.ul`
 display: flex;
-gap: 2rem;
+gap: 1.34vw;
 `
 
 export const BackgroundImage = styled.img`
 z-index: 0;
 position: absolute;
 height: 80vh;
+width: 80vw;
 `
 export const ContainerDetailsHero = styled.div`
 display: flex;

@@ -11,16 +11,17 @@ gsap.registerPlugin(ScrollTrigger)
 export function About() {
 
     useEffect(() => {
-        gsap.fromTo("#aboutLabel, #detailsAbout",
+        gsap.fromTo("#containerAnimation",
             {
-                y: 200
+                y: 500
             },
             {
                 y: 0,
                 duration: 1,
                 scrollTrigger: {
-                    trigger: "#aboutLabel",
+                    trigger: "#about",
                     start: "top bottom",
+                    scrub: true,
                     toggleActions: "play none none reverse",
                 },
             }
@@ -30,6 +31,7 @@ export function About() {
     const { theme } = useContext(ThemeContext)
     return (
         <S.ContainerAbout id='about'>
+            <S.ContainerAboutAnimate id='containerAnimation'>
             <S.ContainerTitleAbout id='aboutLabel' backgroundcolor={theme.containerPrimaryColor}>
                 <S.TitleText textcolor={theme.textColor}>Sobre
                     <S.SpecialTitleText textcolor={theme.specialTextColor}> mim</S.SpecialTitleText>
@@ -45,6 +47,7 @@ export function About() {
 
                     Valorizo o trabalho em equipe e acredito que feedback construtivo impulsiona o progresso. Além do código, encontro prazer em games, séries, filmes e caminhadas ao ar livre.</S.AboutText>
             </S.ContainerDetailsAbout>
+            </S.ContainerAboutAnimate>
         </S.ContainerAbout>
     )
 }

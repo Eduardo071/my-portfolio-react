@@ -60,4 +60,11 @@ font-size: 2rem;
 color: ${props => props.textcolor};
 text-align: justify;
 `
+export const ContainerAboutAnimate = styled.div`
+display: flex;
+flex-direction: column;
+gap: 2rem;
+justify-content: center;
+align-items: center;
+`
 

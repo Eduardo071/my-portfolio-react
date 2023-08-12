@@ -13,56 +13,58 @@ import { gsap } from "gsap"
 gsap.registerPlugin(ScrollTrigger)
 
 export function Skills() {
-    
+
     useEffect(() => {
-        gsap.fromTo("#skillsLabel, #containerSkills",
-        {
-            y: 200
-        },
-        {
-            y: 0,
-            duration: 1,
-            scrollTrigger: {
-                trigger: "#skillsLabel",
-                start: "top bottom",
-                toggleActions: "play none none reverse",
+        gsap.fromTo("#ContainerAnimate",
+            {
+                y: 500
+            },
+            {
+                y: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: "#skills",
+                    start: "top bottom",
+                    scrub: true,
+                    toggleActions: "play none none reverse",
+                }
             }
-        }
-    )
-    
+        )
+
     }, [])
 
     const { theme } = useContext(ThemeContext)
 
     return (
-        <S.ContainerSkills id="skills">  
+        <S.ContainerSkills id="skills">
+            <S.ContainerSkillAnimate>
+                <S.ContainerTitleSkills id="skillsLabel" backgroundcolor={theme.containerPrimaryColor}>
+                    <S.TitleText textcolor={theme.textColor}>Minhas
+                        <S.SpecialTitleText textcolor={theme.specialTextColor}> Habilidades</S.SpecialTitleText>
+                    </S.TitleText>
+                </S.ContainerTitleSkills>
 
-            <S.ContainerTitleSkills id="skillsLabel" backgroundcolor={theme.containerPrimaryColor}>
-                <S.TitleText textcolor={theme.textColor}>Minhas
-                    <S.SpecialTitleText textcolor={theme.specialTextColor}> Habilidades</S.SpecialTitleText>
-                </S.TitleText>
-            </S.ContainerTitleSkills>
+                <S.ContainerMySkills id="containerSkills" shadowcolor={theme.borderShadowColor} backgroundcolor={theme.containerPrimaryColor}>
 
-            <S.ContainerMySkills id="containerSkills" shadowcolor={theme.borderShadowColor} backgroundcolor={theme.containerPrimaryColor}>
-
-                <Swiper
-                modules={[Navigation]}
-                navigation
-                scrollbar={{ draggable: true }}
-                slidesPerView={5}
-                spaceBetween={2}
-                >
-                    {mySkills.map((skill, index) => (
-                    <SwiperSlide key={index}>
-                        <S.Card>
-                        <S.SkillImage src={skill.pathImage} />
-                        <S.SkillName textcolor={theme.textColor}>{skill.name}</S.SkillName>
-                        </S.Card>
-                    </SwiperSlide>
-                ))}
-                </Swiper>
+                    <Swiper
+                        modules={[Navigation]}
+                        navigation
+                        scrollbar={{ draggable: true }}
+                        slidesPerView={5}
+                        spaceBetween={2}
+                    >
+                        {mySkills.map((skill, index) => (
+                            <SwiperSlide key={index}>
+                                <S.Card>
+                                    <S.SkillImage src={skill.pathImage} />
+                                    <S.SkillName textcolor={theme.textColor}>{skill.name}</S.SkillName>
+                                </S.Card>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
 
                 </S.ContainerMySkills>
+            </S.ContainerSkillAnimate>
 
         </S.ContainerSkills>
     )

@@ -14,6 +14,11 @@ margin-bottom: 3.25vh;
 justify-content: space-between;
 align-items: center;
 background-color: ${props => props.backgroundcolor};
+position: fixed;
+top: 0;
+z-index: 10;
+width: 100vw;
+backdrop-filter: blur(0.6rem);
 `
 export const Title = styled.h1<HeaderProps>`
 

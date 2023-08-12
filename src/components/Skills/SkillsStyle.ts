@@ -67,3 +67,8 @@ font-size: 2rem;
 color: ${props => props.textcolor};
 text-align: center;
 `
+export const ContainerSkillAnimate = styled.div`
+display: flex;
+flex-direction: column;
+gap: 2rem;
+`

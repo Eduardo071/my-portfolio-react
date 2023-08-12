@@ -11,7 +11,7 @@ export function Toggler(){
     const [actualIcon, setActualIcon] =useState(sun)
     useEffect(() => theme === themes.light ? setActualIcon(sun) : setActualIcon(moon), [theme])
     return(
-        <S.Toggler backgroundcolor={theme.togglerBackgroundColor} onClick={() => {
+        <S.Toggler id='toggler' backgroundcolor={theme.togglerBackgroundColor} onClick={() => {
             setTheme(theme === themes.light ? themes.dark : themes.light)
         }}>
             <img src={actualIcon} alt="toggler icon" />

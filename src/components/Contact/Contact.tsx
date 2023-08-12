@@ -21,6 +21,7 @@ export function Contact() {
             scrollTrigger: {
                 trigger: "#contactLabel",
                 start: "top bottom",
+                scrub: true,
                 toggleActions: "play none none reverse",
             },
         }
