@@ -4,6 +4,7 @@ import { useContext, useEffect } from 'react'
 import { Toggler } from "../Toggler/Toggler";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { gsap } from "gsap"
+import { BurgerMenu } from '../BurguerMenu/BurgerMenu';
 
 gsap.registerPlugin(ScrollTrigger)
     
@@ -61,14 +62,19 @@ export function NavBar() {
 
             <S.navLinks id='listOfLinks'>
                 <S.list>
-                    <S.InternalLink href="#about"><S.listItem textcolor={theme.textColor}>Sobre mim</S.listItem></S.InternalLink>
-                    <S.InternalLink href="#skills"><S.listItem textcolor={theme.textColor}>Habilidades</S.listItem></S.InternalLink>
-                    <S.InternalLink href="#projects"><S.listItem textcolor={theme.textColor}>Projetos</S.listItem></S.InternalLink>
-                    <S.InternalLink href="#contact"><S.listItem textcolor={theme.textColor}>Contato</S.listItem></S.InternalLink>
+                    <a href="#about"><S.listItem textcolor={theme.textColor}>Sobre mim</S.listItem></a>
+                    <a href="#skills"><S.listItem textcolor={theme.textColor}>Habilidades</S.listItem></a>
+                    <a href="#projects"><S.listItem textcolor={theme.textColor}>Projetos</S.listItem></a>
+                    <a href="#contact"><S.listItem textcolor={theme.textColor}>Contato</S.listItem></a>
                 </S.list>
             </S.navLinks>
 
+            
+            <S.div>
             <Toggler />
+            <BurgerMenu />
+            </S.div>
+            
             
         </S.Header>
     )

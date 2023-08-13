@@ -12,7 +12,10 @@ min-height: 85vh;
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 8.5vh;
+
+@media(max-width: 786px) {
+    min-height: 20vh;;
+}
 `
 
 export const ContainerTextHero = styled.div`
@@ -28,6 +31,10 @@ color: ${props => props.textcolor};
 &:hover {
 cursor: default;
 }
+
+@media(max-width: 786px) {
+font-size: 1.3rem;
+}
 `
 
 export const Title = styled.h1<HeroProps>`
@@ -38,6 +45,11 @@ color: ${props => props.textcolor};
 &:hover {
     cursor: default;
 }
+
+@media(max-width: 786px) {
+font-size: 5rem;
+line-height: 3.5rem;
+}
 `
 
 export const SpecialTitle = styled.strong<HeroProps>`    
@@ -47,6 +59,11 @@ color: ${props => props.textcolor};
 
 &:hover {
     cursor: default;
+}
+
+@media(max-width: 786px) {
+font-size: 5rem;
+line-height: 4.5rem;
 }
 `
 
@@ -66,6 +83,10 @@ z-index: 0;
 position: absolute;
 height: 80vh;
 width: 80vw;
+
+@media(max-width: 786px) {
+    height: 25vh;
+}
 `
 export const ContainerDetailsHero = styled.div`
 display: flex;

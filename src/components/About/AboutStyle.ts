@@ -13,6 +13,11 @@ flex-direction: column;
 justify-content: center;
 gap: 2rem;
 height: 100vh;
+
+@media (max-width: 768px) {
+  height: auto;
+  align-items: center;
+}
 `
 
 export const ContainerTitleAbout = styled.div<AboutProps>`
@@ -24,17 +29,30 @@ align-items: center;
 align-self: center;
 background-color: ${props => props.backgroundcolor};
 clip-path: polygon(15% 0, 90% 0, 75% 100%, 0% 100%);
+
+@media (max-width: 786px) {
+  width: 38rem;
+  margin-left: 4rem;
+}
 `
 
 export const TitleText = styled.h1<AboutProps>`
 font-size: 5rem;
 color: ${props => props.textcolor};
 margin-right: 4rem;
+
+@media (max-width: 786px) {
+  font-size: 4rem;
+}
 `
 
 export const SpecialTitleText = styled.strong<AboutProps>`
 font-size: 5rem;
 color: ${props => props.textcolor};
+
+@media (max-width: 786px) {
+  font-size: 4rem;
+}
 `
 
 export const ContainerDetailsAbout = styled.section<AboutProps>`
@@ -48,11 +66,19 @@ width: 80vw;
 align-self: center;
 padding: 6rem 3rem;
 box-shadow: 5px 17px 31px 0px ${props => props.shadowcolor};
+
+@media (max-width: 786px) {
+  flex-direction: column;
+}
 `
 
 export const MyPhoto = styled.img<AboutProps>`
 border-radius: 50%;
 width: 30rem;
+
+@media (max-width: 786px) {
+  width: 25rem;
+}
 `
 
 export const AboutText = styled.p<AboutProps>`

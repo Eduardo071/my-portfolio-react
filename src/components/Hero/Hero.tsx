@@ -35,7 +35,6 @@ export function Hero() {
     const pdfFileName = 'EduardoBorges_DevFrontEndJunior.pdf'
     return (
         <S.ContainerHero id='hero'>
-
             <S.BackgroundImage id='stacksImage' src={myStacks} />
             <S.ContainerTextHero id='textHero'>
             <S.Subtitle textcolor={theme.subTextColor}>Olá 👋 me chamo Eduardo</S.Subtitle>

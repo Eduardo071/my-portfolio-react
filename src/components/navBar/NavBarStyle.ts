@@ -14,11 +14,8 @@ margin-bottom: 3.25vh;
 justify-content: space-between;
 align-items: center;
 background-color: ${props => props.backgroundcolor};
-position: fixed;
-top: 0;
 z-index: 10;
 width: 100vw;
-backdrop-filter: blur(0.6rem);
 `
 export const Title = styled.h1<HeaderProps>`
 
@@ -38,6 +35,10 @@ display: flex;
 export const list = styled.ul`
 display: flex;
 gap: 1.7rem;
+
+@media(max-width: 786px) {
+  display: none;
+}
 `
 
 export const listItem = styled.li<HeaderProps>`
@@ -45,9 +46,9 @@ font-size: 2.1rem;
 color: ${props => props.textcolor};
 `
 
-export const InternalLink = styled.a`
-
-&:hover {
-
-}
+export const div = styled.div`
+display: flex;
+gap: 1rem;
+align-items: center;
+justify-content: center;
 `
