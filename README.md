@@ -20,7 +20,7 @@
   </p>
 </p>
 
-![Contributors](https://img.shields.io/github/contributors/Eduardo071/my-portfolio-react?color=dark-green) ![Forks](https://img.shields.io/github/forks/Eduardo071/my-portfolio-react?style=social) ![Stargazers](https://img.shields.io/github/stars/Eduardo071/my-portfolio-react?style=social) ![Issues](https://img.shields.io/github/issues/Eduardo071/my-portfolio-react) ![License](https://img.shields.io/github/license/Eduardo071/my-portfolio-react)
+![Contributors](https://img.shields.io/github/contributors/Eduardo071/my-portfolio-react?color=dark-green) ![Issues](https://img.shields.io/github/issues/Eduardo071/my-portfolio-react)
 
 ## Sobre o projeto
 
