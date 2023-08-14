@@ -30,6 +30,10 @@ animation: opacityDown 3.5s linear;
         opacity: 0;
     }
 }
+
+@media(max-width: 786px) {
+    width: 90vw;
+}
 `
 
 export const ContainerMessage = styled.div`

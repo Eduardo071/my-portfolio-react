@@ -14,6 +14,10 @@ align-items: center;
 justify-content: center;
 height: 100vh;
 gap: 2rem;
+
+@media(max-width: 786px) {
+    margin-bottom: 20rem;
+}
 `
 
 export const ContainerTitleProjects = styled.div<ProjectsProps>`
@@ -26,17 +30,30 @@ align-items: center;
 align-self: center;
 background-color: ${props => props.backgroundcolor};
 clip-path: polygon(10% 0, 85% 0, 75% 100%, 0% 100%);
+
+@media (max-width: 786px) {
+    width: 38rem;
+}
 `
 
 export const TitleText = styled.h1<ProjectsProps>`
 font-size: 5rem;
 color: ${props => props.textcolor};
 margin-right: 10rem;
+
+@media (max-width: 786px) {
+    font-size: 3.8rem;
+    margin-right: 5rem;
+}
 `
 
 export const SpecialTitleText = styled.strong<ProjectsProps>`
 font-size: 5rem;
 color: ${props => props.textcolor};
+
+@media (max-width: 786px) {
+    font-size: 3.8rem;
+}
 `
 
 
@@ -80,6 +97,10 @@ display: flex;
 export const ImageDesktopFrame = styled.img`
 width: 40rem;
 z-index: 2;
+
+@media (max-width: 786px) {
+    width: 30rem;
+}
 `
 
 export const ImageDesktopPreview = styled.img`
@@ -89,6 +110,10 @@ z-index: 0;
 top: 0.4rem;
 left: 2.63rem;
 z-index: 1;
+
+@media (max-width: 786px) {
+    width: 25rem;
+}
 `
 
 export const MobilePreview = styled.div<ProjectsProps>`
@@ -101,6 +126,10 @@ bottom: 0;
 export const ImageMobileFrame = styled.img`
 width: 12rem;
 position: relative;
+
+@media (max-width: 786px) {
+    width: 8rem;
+}
 `
 
 export const ImageMobilePreview = styled.img`
@@ -109,6 +138,12 @@ left: 1.65rem;
 top: 0.8rem;
 z-index: -1;
 width: 8.8rem;
+
+@media (max-width: 786px) {
+    width: 6rem;
+    left: 1rem;
+    top: 0.4rem;
+}
 `
 
 export const DescriptionText = styled.p<ProjectsProps>`

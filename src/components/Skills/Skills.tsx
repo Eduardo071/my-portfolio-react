@@ -50,8 +50,13 @@ export function Skills() {
                         modules={[Navigation]}
                         navigation
                         scrollbar={{ draggable: true }}
-                        slidesPerView={5}
+                        slidesPerView={2}
                         spaceBetween={2}
+                        breakpoints={{
+                            786: {
+                                slidesPerView: 5
+                            },
+                        }}
                     >
                         {mySkills.map((skill, index) => (
                             <SwiperSlide key={index}>
