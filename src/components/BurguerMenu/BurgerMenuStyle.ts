@@ -20,7 +20,7 @@ overflow: hidden;
 export const ButtonMenu = styled.button`
 background: transparent;
 border: none;
-width: 2rem;
+width: 3rem;
 height: 3rem;
 justify-self: end;
 
@@ -30,7 +30,7 @@ justify-self: end;
 `
 
 export const BurguerMenu = styled.div<BurgerMenuProps>`
-width: 2rem;
+width: 3rem;
 height: 3rem;
 display: flex;
 flex-direction: column;
@@ -47,6 +47,7 @@ span{
     height: 0.3rem;
     border-radius: 0.5rem;
     transition: animation 1s, 0.2s;
+
 
 }
 

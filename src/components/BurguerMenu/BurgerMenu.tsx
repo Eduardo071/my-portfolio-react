@@ -13,14 +13,14 @@ export function BurgerMenu() {
     const handleClick = () => {
         setIsOpen(!isOpen)
         if (isOpen) {
-            topBurger.current?.classList.add('open')
-            midBurger.current?.classList.add('open')
-            bottomBurger.current?.classList.add('open')
-            document.body.style.overflow = 'hidden'
-        } else {
             topBurger.current?.classList.remove('open')
             midBurger.current?.classList.remove('open')
             bottomBurger.current?.classList.remove('open')
+            document.body.style.overflow = 'hidden'
+        } else {
+            topBurger.current?.classList.add('open')
+            midBurger.current?.classList.add('open')
+            bottomBurger.current?.classList.add('open')
             document.body.style.overflow = 'auto'
         }
     }
@@ -34,7 +34,7 @@ export function BurgerMenu() {
                     <span ref={bottomBurger} />
                 </S.BurguerMenu>
                 </S.ButtonMenu>
-                {!isOpen && 
+                {isOpen && 
                 <S.navLinks backgroundcolor={theme.containerPrimaryColor}>
                     <S.list>
                         <a href="#about"><S.listItem textcolor={theme.textColor}>Sobre mim</S.listItem></a>
